@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: agumon
+  namespace: dev-agumon
+
+
+---
+
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: agumon
+  namespace: stage-agumon
