@@ -1,0 +1,21 @@
+kubectl config view --raw --minify --flatten -o jsonpath='{.clusters[].cluster.certificate-authority-data}'
+
+
+
+apiVersion: v1
+kind: Config
+clusters:
+- cluster:
+    certificate-authority-data: <ca-certificate>
+    server: <kubernetes-server-url>
+  name: <cluster-name>
+contexts:
+- context:
+    cluster: <cluster-name>
+    user: <user-name>
+  name: <context-name>
+current-context: <context-name>
+users:
+- name: <user-name>
+  user:
+    token: <token>
